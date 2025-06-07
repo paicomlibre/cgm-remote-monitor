@@ -82,12 +82,6 @@ function setAPISecret() {
       var shasum = crypto.createHash('sha1');
       shasum.update(readENV('API_SECRET'));
       env.api_secret = shasum.digest('hex');
-
-      if (!readENV('TREATMENTS_AUTH', true)) {
-
-      }
-
-
     }
   }
 }
